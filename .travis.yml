@@ -4,9 +4,6 @@ python: "2.7"
 
 # Use the new container infrastructure
 sudo: false
-env:
-  global:
-   - ROLE_NAME: msbuild
 
 # Install ansible
 addons:
@@ -24,11 +21,6 @@ install:
   # Create ansible.cfg with correct roles_path
   - printf '[defaults]\nroles_path=../' >ansible.cfg
 
-before_script:
-   # Use actual Ansible Galaxy role name for the project directory.
-  - cd ../
-  - mv ansible-role-$ROLE_NAME gmarokov.$ROLE_NAME
-  - cd gmarokov.$ROLE_NAME
   
 script:
   # Basic role syntax check
