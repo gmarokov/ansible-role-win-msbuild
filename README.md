@@ -38,10 +38,10 @@ Example Playbook
 - role: win_msbuild
      vars: 
       proj_path: "C:/MyAspNetSiteRepo/"
-      server_ip: "{{groups['webservers-stage'][0]}}"
+      server_ip: "{{ groups['webservers-stage'][0] }}"
       iis_site: "my-asp-net-site"
       site_name: "MyAspNetSite"
-      config: "Release"
+      config: "Stage"
      tags: 
       - site
 ```
