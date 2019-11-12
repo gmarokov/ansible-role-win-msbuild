@@ -1,0 +1,3 @@
+---
+# defaults file for win_msbuild
+config: "Release"
