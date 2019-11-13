@@ -2,6 +2,7 @@ Ansible role: win_msbuild
 =========
 
 Ansible role for building and deploying ASP.NET site to IIS via MSBuild.
+https://travis-ci.org/gmarokov/ansible-role-win-msbuild.svg?branch=master
 
 Requirements
 ------------
