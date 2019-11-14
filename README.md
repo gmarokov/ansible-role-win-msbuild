@@ -6,10 +6,11 @@ Ansible role for building and deploying ASP.NET site to IIS via MSBuild.
 
 Requirements
 ------------
-0. Windows build server with MSBuild installed and your project's code repository checkout
-1. IIS must be up and running on target server
-2. Site must exist in IIS on the target server
-3. Web Management Service must be enabled and running at port 8172 on the target server
+1. Windows build server with MSBuild installed and your project's code repository checkout
+2. WinRM must be configured and running 
+3. IIS must be up and running on target server
+4. Site must exist in IIS on the target server
+5. Web Management Service must be enabled and running at port 8172 on the target server
 
 Role Variables
 --------------
