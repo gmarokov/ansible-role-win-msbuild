@@ -1,4 +1,4 @@
 ---
 # tasks file for win_msbuild
 - name: Build and deploy site "{{ site_name }}"
-  win_shell: msbuild "{{ proj_path }}/{{ site_name }}/{{ site_name }}.csproj" /t:Rebuild /p:Configuration="{{ config }}" /p:OutputPath="{{ proj_path }}/{{ site_name }}/{{ site_name }}/bin/{{ config }}/" /p:DeployOnBuild=true /p:WebPublishMethod=MSDeploy /p:MSDeployPublishMethod=WMSVC /p:MSDeployServiceURL={{ server_ip }} /p:DeployTarget=MSDeployPublish /p:DeployIisAppPath={{ iis_site }} /p:UserName={{ ansible_user }} /p:Password={{ ansible_password }} /p:AllowUntrustedCertificate=True
+  win_shell: msbuild "{{ proj_path }}/{{ site_name }}/{{ site_name }}.csproj" /t:Build /p:Configuration="{{ config }}" /p:OutputPath="{{ proj_path }}/{{ site_name }}/{{ site_name }}/bin/{{ config }}/" /p:DeployOnBuild=true /p:WebPublishMethod=MSDeploy /p:MSDeployPublishMethod=WMSVC /p:MSDeployServiceURL={{ server_ip }} /p:DeployTarget=MSDeployPublish /p:DeployIisAppPath={{ iis_site }} /p:UserName={{ ansible_user }} /p:Password={{ ansible_password }} /p:AllowUntrustedCertificate=True
